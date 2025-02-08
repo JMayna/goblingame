@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://ln710v6d2ibw"]
+
+[ext_resource type="Script" path="res://Scripts/quit_button.gd" id="1_jwtd7"]
+[ext_resource type="Script" path="res://Scripts/newgame_button.gd" id="1_o4v6h"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 647.0
+scale = Vector2(1.66643, 1.67033)
+
+[node name="newgameButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 131.0
+offset_right = 687.0
+offset_bottom = 199.0
+scale = Vector2(1.00815, 1)
+text = "New Game"
+script = ExtResource("1_o4v6h")
+
+[node name="loadButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 239.0
+offset_right = 689.0
+offset_bottom = 307.0
+text = "Load Game"
+
+[node name="quitButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 343.0
+offset_right = 690.0
+offset_bottom = 411.0
+text = "Quit Game"
+script = ExtResource("1_jwtd7")
+
+[connection signal="pressed" from="Panel/newgameButton" to="Panel/newgameButton" method="_on_pressed"]
+[connection signal="pressed" from="Panel/quitButton" to="Panel/quitButton" method="_on_pressed"]

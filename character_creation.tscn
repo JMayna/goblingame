@@ -1,0 +1,124 @@
+[gd_scene load_steps=6 format=3 uid="uid://j6yjwj3tspqt"]
+
+[ext_resource type="Script" path="res://character_creation.gd" id="1_ju6ck"]
+[ext_resource type="ButtonGroup" uid="uid://ck0ximhtvsm8h" path="res://classButtonGroup.tres" id="2_3dv3e"]
+[ext_resource type="Texture2D" uid="uid://yag6qmrbak1p" path="res://Assets/h_warrior_male_bg.png" id="3_w8ggr"]
+[ext_resource type="Texture2D" uid="uid://be80u608nvi83" path="res://Assets/h_mage_male_bg.png" id="4_jyi5c"]
+[ext_resource type="Texture2D" uid="uid://b5ieok00s5enh" path="res://Assets/h_scout_male_bg.png" id="5_bjwh7"]
+
+[node name="Character_Creation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ju6ck")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+scale = Vector2(1.66539, 1.66266)
+
+[node name="nameInput" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 41.2783
+offset_right = 461.0
+offset_bottom = 72.2783
+scale = Vector2(3.54787, 2.85418)
+placeholder_text = "Enter Player Name"
+
+[node name="nameLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 8.05431
+offset_right = 643.0
+offset_bottom = 37.0543
+text = "Player Name"
+
+[node name="confirmButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 552.727
+offset_right = 695.0
+offset_bottom = 597.727
+text = "Confirm"
+
+[node name="classLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 192.297
+offset_right = 682.0
+offset_bottom = 225.297
+text = "Choose Your Class"
+
+[node name="ClassSelection" type="Control" parent="Panel"]
+anchors_preset = 0
+offset_left = -1.0
+offset_top = 4.02715
+offset_right = 39.0
+offset_bottom = 44.0272
+
+[node name="fighterButton" type="Button" parent="Panel/ClassSelection"]
+layout_mode = 0
+offset_left = 620.0
+offset_top = 376.539
+offset_right = 683.0
+offset_bottom = 407.539
+toggle_mode = true
+button_group = ExtResource("2_3dv3e")
+text = "Fighter
+"
+
+[node name="mageButton" type="Button" parent="Panel/ClassSelection"]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 375.532
+offset_right = 440.0
+offset_bottom = 406.532
+toggle_mode = true
+button_group = ExtResource("2_3dv3e")
+text = "Mage
+"
+
+[node name="thiefButton" type="Button" parent="Panel/ClassSelection"]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 374.525
+offset_right = 563.0
+offset_bottom = 405.525
+toggle_mode = true
+button_group = ExtResource("2_3dv3e")
+text = "Thief
+"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Panel"]
+
+[node name="fighterImage" type="TextureRect" parent="Panel/CanvasLayer"]
+offset_left = 1032.0
+offset_top = 471.0
+offset_right = 3260.0
+offset_bottom = 3876.0
+scale = Vector2(0.045547, 0.0425804)
+texture = ExtResource("3_w8ggr")
+
+[node name="mageImage" type="TextureRect" parent="Panel/CanvasLayer"]
+offset_left = 627.0
+offset_top = 469.0
+offset_right = 2855.0
+offset_bottom = 3385.0
+scale = Vector2(0.0509385, 0.0494303)
+texture = ExtResource("4_jyi5c")
+
+[node name="thiefImage" type="TextureRect" parent="Panel/CanvasLayer"]
+offset_left = 838.0
+offset_top = 469.0
+offset_right = 3066.0
+offset_bottom = 3385.0
+scale = Vector2(0.0516763, 0.0495978)
+texture = ExtResource("5_bjwh7")
+stretch_mode = 2
+
+[connection signal="pressed" from="Panel/confirmButton" to="." method="_on_confirm_button_pressed"]

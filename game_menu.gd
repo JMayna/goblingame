@@ -5,6 +5,8 @@ extends Control
 @onready var playerGoldLabel = $CanvasLayer/PlayerInfo/PlayerGoldLabel
 @onready var playerLevelLabel =$CanvasLayer/PlayerInfo/PlayerLevelLabel
 @onready var playerExperienceLabel = $CanvasLayer/PlayerInfo/PlayerExperienceLabel
+@onready var playerHealthLabel = $CanvasLayer/PlayerInfo/PlayerHealthLabel
+@onready var playerACLabel = $CanvasLayer/PlayerInfo/PlayerACLabel
 
 func _ready():
 	var playerName = Globals.player_name
@@ -12,6 +14,8 @@ func _ready():
 	var playerLevel = Globals.player_level
 	var playerGold = Globals.player_gold
 	var playerXP = Globals.player_xp
+	var playerAC = Globals.player_armor_class
+	var playerHealth = Globals.player_health
 
 	if playerNameLabel:
 		playerNameLabel.text = "Player: " + playerName
@@ -27,6 +31,12 @@ func _ready():
 	
 	if playerLevelLabel:
 		playerLevelLabel.text="Level: " + str(playerLevel)
+	
+	if playerACLabel:
+		playerACLabel.text ="AC: " + str(playerAC)
+		
+	if playerHealthLabel:
+		playerHealthLabel.text = "Health: " + str(playerHealth)
 	
 
 
@@ -63,6 +73,8 @@ func _load_game():
 			Globals.player_gold = data.result.gold
 			Globals.player_xp = data.result.experience
 			Globals.player_level = data.result.level
+			Globals.player_armor_class =data.result.armor_class
+			Globals.player_health = data.result.player_health
 			
 			#Update UI
 			_update_ui()
@@ -83,4 +95,12 @@ func _update_ui():
 	if playerExperienceLabel:
 		playerExperienceLabel.text = "Exp: " + str(Globals.player_xp)
 	if playerLevelLabel:
-		playerLevelLabel.text = "Player: " + str(Globals.player_level) 
+		playerLevelLabel.text = "Level: " + str(Globals.player_level) 
+	if playerHealthLabel:
+		playerHealthLabel.text = "Health: " + str(Globals.player_health)
+	if playerACLabel:
+		playerACLabel.text = "AC: " + str(Globals.player_armor_class)
+
+
+func _on_next_encounter_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://encounter.tscn")

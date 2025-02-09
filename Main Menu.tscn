@@ -17,7 +17,7 @@ script = ExtResource("1_72e87")
 layout_mode = 0
 offset_right = 1151.0
 offset_bottom = 647.0
-scale = Vector2(1.66643, 1.67033)
+scale = Vector2(0.99603, 1.01143)
 
 [node name="newgameButton" type="Button" parent="Panel"]
 layout_mode = 0

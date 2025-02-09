@@ -61,27 +61,43 @@ offset_right = 232.0
 offset_bottom = 55.0
 text = "Exp:"
 
+[node name="PlayerHealthLabel" type="Label" parent="CanvasLayer/PlayerInfo"]
+offset_left = 281.0
+offset_top = 46.0
+offset_right = 362.0
+offset_bottom = 84.0
+text = "Health"
+
+[node name="PlayerACLabel" type="Label" parent="CanvasLayer/PlayerInfo"]
+offset_left = 383.0
+offset_top = 16.0
+offset_right = 464.0
+offset_bottom = 54.0
+text = "AC
+"
+
 [node name="mainMenubutton" type="Button" parent="CanvasLayer"]
-offset_left = 13.0
-offset_top = 960.0
-offset_right = 178.0
-offset_bottom = 1051.0
+offset_left = 3.0
+offset_top = 550.0
+offset_right = 168.0
+offset_bottom = 641.0
 text = "Main Menu"
 
 [node name="nextEncounterButton" type="Button" parent="CanvasLayer"]
-offset_left = 305.0
-offset_top = 428.0
-offset_right = 525.0
-offset_bottom = 514.0
+offset_left = 427.0
+offset_top = 296.0
+offset_right = 647.0
+offset_bottom = 382.0
 text = "Next Encounter"
 
 [node name="saveGameButton" type="Button" parent="CanvasLayer"]
-offset_left = 194.0
-offset_top = 960.0
-offset_right = 359.0
-offset_bottom = 1051.0
+offset_left = 218.0
+offset_top = 552.0
+offset_right = 383.0
+offset_bottom = 643.0
 text = "Save Game
 "
 
 [connection signal="pressed" from="CanvasLayer/mainMenubutton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/nextEncounterButton" to="." method="_on_next_encounter_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/saveGameButton" to="." method="_on_button_pressed"]

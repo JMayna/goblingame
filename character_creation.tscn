@@ -17,9 +17,11 @@ script = ExtResource("1_ju6ck")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 648.0
-scale = Vector2(1.66539, 1.66266)
+offset_left = 4.0
+offset_top = -2.0
+offset_right = 1157.0
+offset_bottom = 646.0
+scale = Vector2(0.995664, 1.00318)
 
 [node name="nameInput" type="LineEdit" parent="Panel"]
 layout_mode = 0
@@ -97,27 +99,27 @@ text = "Thief
 [node name="CanvasLayer" type="CanvasLayer" parent="Panel"]
 
 [node name="fighterImage" type="TextureRect" parent="Panel/CanvasLayer"]
-offset_left = 1032.0
-offset_top = 471.0
-offset_right = 3260.0
-offset_bottom = 3876.0
+offset_left = 619.0
+offset_top = 231.0
+offset_right = 2847.0
+offset_bottom = 3636.0
 scale = Vector2(0.045547, 0.0425804)
 texture = ExtResource("3_w8ggr")
 
 [node name="mageImage" type="TextureRect" parent="Panel/CanvasLayer"]
-offset_left = 627.0
-offset_top = 469.0
-offset_right = 2855.0
-offset_bottom = 3385.0
+offset_left = 357.0
+offset_top = 232.0
+offset_right = 2585.0
+offset_bottom = 3148.0
 scale = Vector2(0.0509385, 0.0494303)
 texture = ExtResource("4_jyi5c")
 
 [node name="thiefImage" type="TextureRect" parent="Panel/CanvasLayer"]
-offset_left = 838.0
-offset_top = 469.0
-offset_right = 3066.0
-offset_bottom = 3385.0
-scale = Vector2(0.0516763, 0.0495978)
+offset_left = 490.0
+offset_top = 231.0
+offset_right = 2718.0
+offset_bottom = 3147.0
+scale = Vector2(0.0520468, 0.0495978)
 texture = ExtResource("5_bjwh7")
 stretch_mode = 2
 

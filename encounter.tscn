@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqbs31go5cv5j"]
+
+[ext_resource type="Script" path="res://Scripts/encounter.gd" id="1_kvu78"]
+
+[node name="Encounter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.998605, 0.997503)
+script = ExtResource("1_kvu78")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="enemyInfo" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="enemyNameLabel" type="Label" parent="CanvasLayer/enemyInfo"]
+offset_right = 51.0
+offset_bottom = 23.0
+text = "Name:"
+
+[node name="enemyHealthLabel" type="Label" parent="CanvasLayer/enemyInfo"]
+offset_left = 1.0
+offset_top = 30.0
+offset_right = 57.0
+offset_bottom = 53.0
+text = "Health:"
+
+[node name="enemyACLabel" type="Label" parent="CanvasLayer/enemyInfo"]
+offset_left = 1.0
+offset_top = 58.0
+offset_right = 41.0
+offset_bottom = 81.0
+text = "AC:"
+
+[node name="playerInfo" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 14.0
+offset_right = 47.0
+offset_bottom = 54.0
+scale = Vector2(0.887278, 0.587202)
+
+[node name="playerNameLabel" type="Label" parent="CanvasLayer/playerInfo"]
+offset_top = 976.0
+offset_right = 47.0
+offset_bottom = 999.0
+text = "Name"
+
+[node name="playerHealthLabel" type="Label" parent="CanvasLayer/playerInfo"]
+offset_top = 1006.0
+offset_right = 52.0
+offset_bottom = 1029.0
+text = "Health"
+
+[node name="playerACLabel" type="Label" parent="CanvasLayer/playerInfo"]
+offset_left = 1.0
+offset_top = 1038.0
+offset_right = 41.0
+offset_bottom = 1061.0
+text = "AC:"
+
+[node name="attackButton" type="Button" parent="CanvasLayer"]
+offset_left = 480.0
+offset_top = 553.0
+offset_right = 538.0
+offset_bottom = 584.0
+scale = Vector2(2.72466, 2.79696)
+text = "Attack"
+
+[node name="battleLog" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -438.0
+offset_top = -222.0
+offset_right = 489.0
+offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+autowrap_mode = 2
+
+[connection signal="pressed" from="CanvasLayer/attackButton" to="." method="_on_attack_button_pressed"]

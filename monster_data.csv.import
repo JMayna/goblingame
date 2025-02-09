@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://8g1158cjjqec"
+
+[deps]
+
+files=["res://monster_data.Level.translation", "res://monster_data.Health.translation", "res://monster_data.Attack.translation", "res://monster_data.Armor Class.translation", "res://monster_data.Experience.translation"]
+
+source_file="res://monster_data.csv"
+dest_files=["res://monster_data.Level.translation", "res://monster_data.Health.translation", "res://monster_data.Attack.translation", "res://monster_data.Armor Class.translation", "res://monster_data.Experience.translation"]
+
+[params]
+
+compress=true
+delimiter=0

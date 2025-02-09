@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ln710v6d2ibw"]
+[gd_scene load_steps=4 format=3 uid="uid://ln710v6d2ibw"]
 
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_72e87"]
 [ext_resource type="Script" path="res://Scripts/quit_button.gd" id="1_jwtd7"]
 [ext_resource type="Script" path="res://Scripts/newgame_button.gd" id="1_o4v6h"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_72e87")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -45,4 +47,5 @@ text = "Quit Game"
 script = ExtResource("1_jwtd7")
 
 [connection signal="pressed" from="Panel/newgameButton" to="Panel/newgameButton" method="_on_pressed"]
+[connection signal="pressed" from="Panel/loadButton" to="." method="_on_load_button_pressed"]
 [connection signal="pressed" from="Panel/quitButton" to="Panel/quitButton" method="_on_pressed"]

@@ -17,6 +17,8 @@ func _on_confirm_button_pressed() -> void:
 	
 	#Get class from button group
 	var player_class = ""
+	var class_selected = false
+	
 	if fighter_button.is_pressed():
 		player_class = "Fighter"
 	elif mage_button.is_pressed():
@@ -42,5 +44,5 @@ func _save_player_data(playername, playerclass):
 	Globals.player_class = playerclass
 	Globals.player_gold = 0
 	Globals.player_level = 1
-	Globals.player_experince = 0
+	Globals.player_xp = 0
 	

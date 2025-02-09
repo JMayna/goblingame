@@ -36,6 +36,7 @@ offset_bottom = 88.0
 text = "Class:"
 
 [node name="PlayerGoldLabel" type="Label" parent="CanvasLayer/PlayerInfo"]
+layout_mode = 0
 offset_left = 281.0
 offset_top = 18.0
 offset_right = 362.0
@@ -44,6 +45,7 @@ text = "Gold
 "
 
 [node name="PlayerLevelLabel" type="Label" parent="CanvasLayer/PlayerInfo"]
+layout_mode = 0
 offset_left = 152.0
 offset_top = 51.0
 offset_right = 233.0
@@ -52,17 +54,34 @@ text = "Level:
 "
 
 [node name="PlayerExperienceLabel" type="Label" parent="CanvasLayer/PlayerInfo"]
+layout_mode = 0
 offset_left = 151.0
 offset_top = 17.0
 offset_right = 232.0
 offset_bottom = 55.0
 text = "Exp:"
 
-[node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 10.0
-offset_top = 992.0
-offset_right = 175.0
-offset_bottom = 1083.0
+[node name="mainMenubutton" type="Button" parent="CanvasLayer"]
+offset_left = 13.0
+offset_top = 960.0
+offset_right = 178.0
+offset_bottom = 1051.0
 text = "Main Menu"
 
-[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[node name="nextEncounterButton" type="Button" parent="CanvasLayer"]
+offset_left = 305.0
+offset_top = 428.0
+offset_right = 525.0
+offset_bottom = 514.0
+text = "Next Encounter"
+
+[node name="saveGameButton" type="Button" parent="CanvasLayer"]
+offset_left = 194.0
+offset_top = 960.0
+offset_right = 359.0
+offset_bottom = 1051.0
+text = "Save Game
+"
+
+[connection signal="pressed" from="CanvasLayer/mainMenubutton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/saveGameButton" to="." method="_on_button_pressed"]
